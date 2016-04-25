@@ -53,6 +53,11 @@ public class SalesCollectionTest {
         assertTrue(salesCollection.productCareRatio() == 0.5);
     }
 
+    @Test
+    public void it_saves_and_loads_sales_collection() {
+
+    }
+
     private SalesCollection getSalesCollection() {
         Sale sale1 = new Sale(11.0, 25.0, true);
 

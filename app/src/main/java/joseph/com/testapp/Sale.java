@@ -1,11 +1,12 @@
 package joseph.com.testapp;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by administrator on 24/04/2016.
  */
-public class Sale {
+public class Sale implements Serializable {
 
     public Double purchaseCost;
 

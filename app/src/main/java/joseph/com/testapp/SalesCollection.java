@@ -1,11 +1,19 @@
 package joseph.com.testapp;
 
+import android.content.Context;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 /**
  * Created by administrator on 24/04/2016.
  */
 public class SalesCollection {
+
+    private String FILENAME = "hello_file";
 
     public ArrayList<Sale> sales;
 
@@ -46,5 +54,25 @@ public class SalesCollection {
             if(sale.productCare) { count++; }
         }
         return Double.valueOf(count) / Double.valueOf(this.sales.size());
+    }
+
+    public void save(Context context) throws IOException {
+        FileOutputStream fos = context.openFileOutput(FILENAME, Context.MODE_PRIVATE);
+        ObjectOutputStream os = new ObjectOutputStream(fos);
+        os.writeObject(this.sales);
+        os.close();
+        fos.close();
+    }
+
+    public SalesCollection load(Context context) throws IOException, ClassNotFoundException {
+        FileInputStream fis = context.openFileInput(FILENAME);
+        ObjectInputStream is = new ObjectInputStream(fis);
+        ArrayList<Sale> sales = (ArrayList<Sale>) is.readObject();
+        SalesCollection salesCollection = new SalesCollection();
+        salesCollection.sales = sales;
+        is.close();
+        fis.close();
+
+        return salesCollection;
     }
 }
