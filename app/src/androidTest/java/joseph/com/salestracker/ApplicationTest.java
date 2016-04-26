@@ -1,4 +1,4 @@
-package joseph.com.testapp;
+package joseph.com.salestracker;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,4 +1,4 @@
-package joseph.com.testapp;
+package joseph.com.salestracker;
 
 import java.io.Serializable;
 import java.util.Date;

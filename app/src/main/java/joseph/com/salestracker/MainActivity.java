@@ -1,4 +1,4 @@
-package joseph.com.testapp;
+package joseph.com.salestracker;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

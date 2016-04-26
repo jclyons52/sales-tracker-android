@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="joseph.com.testapp">
+    package="joseph.com.salestracker">
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="joseph.com.salestracker.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -16,13 +16,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StatsActivity"
+            android:name="joseph.com.salestracker.StatsActivity"
             android:label="@string/title_activity_stats"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="joseph.com.salestracker.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="joseph.com.testapp.MainActivity" />
+                android:value="joseph.com.salestracker.MainActivity" />
         </activity>
     </application>
 
