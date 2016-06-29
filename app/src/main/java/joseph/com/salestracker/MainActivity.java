@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         try {
-            this.salesCollection.save(this);
+            salesCollection.save(this);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -60,6 +60,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void viewStats(View view) {
         Intent intent = new Intent(this, StatsActivity.class);
+        startActivity(intent);
+    }
+
+    public void viewBreakdown(View view) {
+        Intent intent = new Intent(this, BreakdownActivity.class);
         startActivity(intent);
     }
 }

@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="joseph.com.salestracker.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -16,14 +16,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="joseph.com.salestracker.StatsActivity"
+            android:name=".StatsActivity"
             android:label="@string/title_activity_stats"
-            android:parentActivityName="joseph.com.salestracker.MainActivity"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="joseph.com.salestracker.MainActivity" />
         </activity>
+        <activity
+            android:name=".BreakdownActivity"
+            android:label="@string/title_activity_breakdown"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
